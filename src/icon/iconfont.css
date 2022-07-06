@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "toutiao";
+    /* Project id 3497014 */
+    src: url('./iconfont.woff2?t=1656851113012') format('woff2'), url('./iconfont.woff?t=1656851113012') format('woff'), url('./iconfont.ttf?t=1656851113012') format('truetype');
+}
+
+.toutiao {
+    font-family: "toutiao" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.toutiao-pinglun:before {
+    content: "\e604";
+}
+
+.toutiao-dianzan:before {
+    content: "\e605";
+}
+
+.toutiao-fenxiang:before {
+    content: "\e606";
+}
+
+.toutiao-guanbi:before {
+    content: "\e607";
+}
+
+.toutiao-lishi:before {
+    content: "\e608";
+}
+
+.toutiao-gengduo:before {
+    content: "\e609";
+}
+
+.toutiao-shanchu:before {
+    content: "\e60a";
+}
+
+.toutiao-shouye:before {
+    content: "\e60b";
+}
+
+.toutiao-shouji:before {
+    content: "\e60c";
+}
+
+.toutiao-shipin:before {
+    content: "\e60d";
+}
+
+.toutiao-shoucang:before {
+    content: "\e60e";
+}
+
+.toutiao-dianzan2:before {
+    content: "\e60f";
+}
+
+.toutiao-sousuo:before {
+    content: "\e610";
+}
+
+.toutiao-wode:before {
+    content: "\e611";
+}
+
+.toutiao-zuojiantou:before {
+    content: "\e612";
+}
+
+.toutiao-yanzhengma:before {
+    content: "\e613";
+}
+
+.toutiao-wuwangluo:before {
+    content: "\e614";
+}
+
+.toutiao-youjiantou:before {
+    content: "\e615";
+}
+
+.toutiao-wenda:before {
+    content: "\e616";
+}
+
+.toutiao-yuedu:before {
+    content: "\e617";
+}
+
+.toutiao-zuopin:before {
+    content: "\e618";
+}

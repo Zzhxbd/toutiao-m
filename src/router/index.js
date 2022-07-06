@@ -1,14 +1,45 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
-
-]
+    {
+        path:'/',
+        redirect:'/home',
+        component:()=>import('@/views/layout'),
+        children:[
+            {
+                path:'home',
+                name:'home',
+                component:()=>import('@/views/layout/home')
+            },
+            {
+                path:'qa',
+                name:'qa',
+                component:()=>import('@/views/layout/qa')
+            },
+            {
+                path:'video',
+                name:'video',
+                component:()=>import('@/views/layout/video')
+            },
+            {
+                path:'my',
+                name:'my',
+                component:()=>import('@/views/layout/my')
+            }
+        ]
+    },
+    {
+    path: "/login",
+    name: "login",
+    component: () =>
+        import ("@/views/login"),
+}, ];
 
 const router = new VueRouter({
-  routes
-})
+    routes,
+});
 
-export default router
+export default router;
