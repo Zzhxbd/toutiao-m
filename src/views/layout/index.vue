@@ -1,7 +1,7 @@
 <template>
   <div class="layout-container">
     <router-view />
-    <van-tabbar route class="layout-tabbar">
+    <van-tabbar route class="layout-tabbar" placeholder>
       <van-tabbar-item icon-prefix="toutiao" replace to="/home" icon="shouye"
         >首页</van-tabbar-item
       >
@@ -12,15 +12,19 @@
         >视频</van-tabbar-item
       >
       <van-tabbar-item icon-prefix="toutiao" replace to="/my" icon="wode"
-        >我的</van-tabbar-item
+        >{{user? '我的':'未登录'}}</van-tabbar-item
       >
     </van-tabbar>
   </div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'LayoutIndex',
+  computed:{
+    ...mapState(['user'])
+  }
 }
 </script>
 

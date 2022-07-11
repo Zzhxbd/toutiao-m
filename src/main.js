@@ -7,6 +7,7 @@ import "@/icon/iconfont.css";
 import "@/styles/index.less";
 import '@/vant'
 import 'amfe-flexible'
+import '@/utils/dayjs'
 Vue.config.productionTip = false;
 
 new Vue({
