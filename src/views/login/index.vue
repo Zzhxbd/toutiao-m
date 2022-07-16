@@ -59,9 +59,8 @@ export default {
   data() {
     return {
       user: {
-        mobile: '13637040274',
+        mobile: 13637040274,
         code: '246810',
-        duration: 0,
       },
       userFormRules: {
         mobile: [
@@ -84,10 +83,9 @@ export default {
     }
   },
   methods: {
-    async onSubmit() {
+    async onSubmit(data) {
       //1.获取表单数据
       //2.表单验证
-
       this.$toast.loading({
         message: '登录中...',
         forbidClick: true,
@@ -95,7 +93,8 @@ export default {
       })
       //3.提交表单请求登录
       try {
-        const res = await login(this.user)
+        const res = await login (data)
+        // console.log(data);
         console.log('登陆成功', res)
         this.$toast.success('登录成功')
         this.$store.commit('setUser', res.data.data)
@@ -106,7 +105,7 @@ export default {
           //   console.log("手机号或验证码错误");
           this.$toast.fail('手机号或验证码错误')
         } else {
-          //   console.log("登陆失败,请稍后重试", err);
+            console.log("登陆失败,请稍后重试", err);
           this.$toast.fail('登陆失败,请稍后重试')
         }
       }
@@ -142,6 +141,8 @@ export default {
       }
     },
   },
+  created(){
+  }
 }
 </script>
 

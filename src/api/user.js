@@ -1,12 +1,10 @@
-import request from "@/utils/request";
-// import store from "@/store";
-export const login = (data) => {
-    return request({
-        method: "POST",
-        url: "/v1_0/authorizations",
-        data,
-    });
-};
+import request from '@/utils/request'
+// import store from '@/store'
+export const login = data => request({
+  url: '/v1_0/authorizations',
+  method: 'POST',
+  data
+})
 //发送验证码
 export const sendSms = (mobile) => {
     return request({
@@ -15,10 +13,10 @@ export const sendSms = (mobile) => {
     });
 };
 //获取用户自己的信息
-export const getUserInfo= ()=>{
+export const getUserInfo = () => {
     return request({
-        method:'GET',
-        url:'/v1_0/user',
+        method: 'GET',
+        url: '/v1_0/user',
         // headers:{
         //     Authorization:`Bearer ${store.state.user.token}`
         // }
