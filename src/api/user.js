@@ -17,9 +17,6 @@ export const getUserInfo = () => {
     return request({
         method: 'GET',
         url: '/v1_0/user',
-        // headers:{
-        //     Authorization:`Bearer ${store.state.user.token}`
-        // }
     })
 }
 //获取用户个人资料
